@@ -1,0 +1,20 @@
+<div class="container">
+  
+  <h1>Let's find us some anagrams!</h1>
+
+  <form action="/input" method="post">
+    Input your word:
+    <br>
+    <input type="text" name="input">
+    <input type="submit" value="anagram">
+  </form>
+
+  <% if @words %>
+    <div id="results">
+      <% @words.each do |word| %>
+        <p><%= word.value %></p>
+      <% end %>
+    </div>
+  <% end %>
+
+</div>
